@@ -15,10 +15,8 @@ body {
   overflow: hidden;
 }
 
-
-
 .home_Button:hover{
-  background: rgb(0, 204, 44);;
+  cursor: pointer;
 }
 
 
@@ -67,6 +65,11 @@ button{
   opacity: 1;
   text-align: left;
 }
+
+.change_button{
+  cursor: pointer;
+}
+
 .NextR_button {
   width: 128px;
   height: 46px;
@@ -83,9 +86,6 @@ button{
   border: none;
   cursor: pointer;
 }
-.NextR_button:hover{
-  background: rgb(177, 158, 122);
-}
 
 .NextR_button_text {
   width: 132px;
@@ -98,10 +98,6 @@ button{
   font-size: 24px;
   opacity: 1;
   text-align: center;
-}
-
-.PreviousR_button:hover{
-  background: rgb(177, 158, 122);
 }
 
 .PreviousR_button {
@@ -117,6 +113,8 @@ button{
   border-bottom-left-radius: 23px;
   border-bottom-right-radius: 23px;
   overflow: hidden;
+  border: none;
+  cursor: pointer;
 }
 .PreviousR_button_text {
   width: 132px;
@@ -130,9 +128,10 @@ button{
   opacity: 1;
   text-align: center;
 }
+
 .Add_text {
   width: 368px;
-  color: rgba(118,255,10,1);
+  color: #00CC2C;
   position: absolute;
   top: 187px;
   left: 4px;
@@ -153,7 +152,8 @@ button{
   opacity: 1;
   text-align: center;
 }
-.v1_60 {
+
+.right_grey {
   width: 400px;
   height: 480px;
   background: rgba(245,245,245,1);
@@ -163,6 +163,7 @@ button{
   left: 400px;
   overflow: hidden;
 }
+
 .v1_39 {
   width: 291px;
   height: 298px;
@@ -173,25 +174,14 @@ button{
   left: 463px;
   border-radius: 50%;
 }
-.amount_text1 {
-  width: 291px;
-  color: rgba(118,255,10,1);
-  position: absolute;
-  top: 176px;
-  left: 463px;
-  font-family: Helvetica Neue;
-  font-weight: Medium;
-  font-size: 64px;
-  opacity: 1;
-  text-align: center;
-}
 
 .donut-ring {
   position: absolute;
-  top: 70px;
-  left: 505px;
-  width: 200px;
-  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
 }
 
 .ring {
@@ -210,7 +200,7 @@ button{
 .ring.quad1 {
   top: 0;
   right: 0;
-  background-color: rgba(118,255,10,1);
+  background-color: #00CC2C;
   border-radius: 0 100% 0 0;
 }
 
@@ -229,12 +219,13 @@ button{
 }
 
 .cutout {
-  width: 90%;
-  height: 90%;
+  width: 82%;
+  height: 82%;
   background-color: rgba(245,245,245,1);
   position: absolute;
-  top: 5%;
-  left: 5%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   pointer-events: none;
 }

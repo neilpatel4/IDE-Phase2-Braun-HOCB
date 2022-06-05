@@ -33,10 +33,14 @@ button {
   cursor: pointer;
 }
 
+.vanilla_option, .chocolate_option, .white_option{
+  cursor: pointer;
+}
+
 .vanilla {
   width: 170px;
   height: 271px;
-  background: rgb(165, 27, 27);
+  background: rgba(245,245,245,1);
   opacity: 1;
   position: absolute;
   top: 99px;
