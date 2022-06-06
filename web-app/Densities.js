@@ -1,3 +1,5 @@
+const move_time = Object.create(null);
+
 var Densities = {
     "Water": 1,
     "Self-Raising Flour": 0.512,
