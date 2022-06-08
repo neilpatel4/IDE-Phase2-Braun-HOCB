@@ -1,3 +1,5 @@
+const Recipes = Object.create(null);
+
 var Densities = {
     "Water": 1,
     "Self-Raising Flour": 0.512,
@@ -8,7 +10,7 @@ var Densities = {
     "Cream Cheese": 0.98
 };
 
-//Carrot Cake Recipe ingredients
+//Carrot Cake Recipe ingredients§
 var Carrot_Cake = {
     1: ["Vegetable Oil", 230, "ml"],
     2: ["Natural Yogurt", 100, "g"],
@@ -36,14 +38,15 @@ var Red_Velvet_Cake = {
 };
 
 // Vanilla Sponge Cake Recipe ingredients
-var Vanilla_Sponge_Cake = {
+Recipes.Vanilla_Sponge_Cake = {
     1: ["Golden Caster Sugar", 250, "g"],
     2: ["Self-Raising Flour", 255, "g"],
     3: ["Plain Flour", 85, "g"],
     4: ["Full-Fat Greek Yogurt", 100, "g"]
 };
 
-function Recipe_Step_Time(R, n) {
+Recipes.step_time = function (R, n) {
+
     let Current_Step = R[n];
     let Current_Ingredient = Current_Step[0];
     let Current_Amount = Current_Step[1];
@@ -53,6 +56,8 @@ function Recipe_Step_Time(R, n) {
     console.log(message);
     let p = Densities[Current_Ingredient];
     let m = Current_Amount;
+    let h;
+    let t;
     if (Current_Unit == "g") {
         h = 100 - m / ((p / 1000) * Math.PI * (57 ** 2));
         t = h / 25;
@@ -72,4 +77,6 @@ function Recipe_Step_Time(R, n) {
     return t;
 }
 
-Recipe_Step_Time(Vanilla_Sponge_Cake, 2);
+/* Recipe_Step_Time(Vanilla_Sponge_Cake, 2); */
+
+export default Object.freeze(Recipes);

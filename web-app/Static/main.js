@@ -1,4 +1,4 @@
-//import move_time from "./Densities.js";
+import Recipes from "../Densities.js";
 
 // Recipe step by step array
 //var recipe_step = {"VSC": [1, 2, 3, 4],
@@ -89,7 +89,7 @@ start_button.onclick = function() {
   popup.style.visibility = "hidden";
   start_button.style.visibility = "hidden";
   popup_desc.style.visibility = "hidden";
-
+  
 };
 
 ready_button.onclick = function () {
@@ -106,6 +106,10 @@ ready_button.onclick = function () {
     done_button.style.visibility = "visible";
     next_button.style.visibility = "hidden";
   }
+
+
+  var move_time = Recipes.step_time(Recipes.Vanilla_Sponge_Cake, i);
+  console.log(move_time);
 };
 
 
