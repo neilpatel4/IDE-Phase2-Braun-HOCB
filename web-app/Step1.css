@@ -234,7 +234,7 @@ button{
 
 
 #popup {
-  visibility: hidden;
+  visibility: visible;
   width: 700px;
   height: 420px;
   background: rgba(245,245,245,1);
@@ -298,6 +298,24 @@ button{
   background: rgba(255,184,45,1);
   opacity: 1;
   position: absolute;
+  top: 413px;
+  left: 197px;
+  border-top-left-radius: 23px;
+  border-top-right-radius: 23px;
+  border-bottom-left-radius: 23px;
+  border-bottom-right-radius: 23px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+
+#start_button {
+  visibility: visible;
+  width: 128px;
+  height: 46px;
+  background: rgba(255,184,45,1);
+  opacity: 1;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -308,4 +326,19 @@ button{
   overflow: hidden;
   border: none;
   cursor: pointer;
+}
+
+#popup_desc {
+
+  
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Helvetica Neue;
+  font-weight: Medium;
+  font-size: 16px;
+  opacity: 1;
+  text-align: center;
 }

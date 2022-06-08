@@ -23,6 +23,8 @@ const recipes = {
 const next_button = document.getElementById("NextR_button");
 const back_button = document.getElementById("PreviousR_button");
 const ready_button = document.getElementById("Ready_button");
+const start_button = document.getElementById("start_button");
+const popup_desc = document.getElementById("popup_desc");
 const done_button = document.getElementById("Done_button");
 const home_button = document.getElementById("home_Button");
 const popup = document.getElementById("popup");
@@ -72,10 +74,7 @@ next_button.onclick = function () {
   console.log("Linear Actuator move to down position");
   popup.style.visibility = "visible";
   check_back_button(i);
-  if (current_step[i] == total_steps) {
-    done_button.style.visibility = "visible";
-    ready_button.style.visibility = "hidden";
-  };
+
 
 };
 
@@ -83,6 +82,14 @@ next_button.onclick = function () {
 done_button.onclick = function () {
   window.location.replace("index.html");
   console.log("Finished. Move linear actuator down.");
+};
+
+
+start_button.onclick = function() {
+  popup.style.visibility = "hidden";
+  start_button.style.visibility = "hidden";
+  popup_desc.style.visibility = "hidden";
+
 };
 
 ready_button.onclick = function () {
@@ -95,10 +102,16 @@ ready_button.onclick = function () {
   description.innerHTML = instruction[i];
   quads[i].style.backgroundColor = "#00CC2C";
   check_back_button(i);
+  if (current_step[i] == total_steps) {
+    done_button.style.visibility = "visible";
+    next_button.style.visibility = "hidden";
+  }
 };
 
 
 back_button.onclick = function () {
+  done_button.style.visibility = "hidden";
+  next_button.style.visibility = "visible";
   console.log("Move to previous ingredient height");
   i = i - 1;
   console.log(current_step[i]);
@@ -117,6 +130,6 @@ function check_back_button(i) {
     back_button.style.visibility = "visible";
   } else {
     back_button.style.visibility = "hidden";
-  };
+  }
 };
 
