@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+<script type="module" src="main.js"></script>
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=Helvetica+Neue&display=swap" rel="stylesheet" />
-    <link href="./defaultS3.css" rel="stylesheet" />
+    <link href="./Step1.css" rel="stylesheet" />
     <title>Document</title>
 </head>
 
@@ -11,24 +12,24 @@
 
 <body>
     <div class="screenV">
-        <button class="home_Button" type = "buttonR" onclick="location.href='index.html'"> &#127968;
+        <button class="home_Button" type="buttonR" onclick="location.href='index.html'">&#127968;
         </button>
 
         <span class="Title_Cake">Vanilla Sponge Cake</span>
-        <span class="Steps1">Step 3 of 4</span>
-        
-        <div class = change_button onclick="location.href='indexReady3.html'">
-            <button class="NextR_button"></button> 
-            <span class="NextR_button_text">Next</span>
-            </div>
-            
-        <div class = change_button onclick="location.href='indexS2.html'">
-            <button class="PreviousR_button" ></button> 
+        <span id="Steps1">Step 1 of 4</span>
+
+        <div class=change_button>
+            <button id="NextR_button">Next</button>
+
+        </div>
+
+        <div class=change_button onclick="location.href='index.html'">
+            <button class="PreviousR_button"></button>
             <span class="PreviousR_button_text">Back</span>
-            </div>
-        
+        </div>
+
         <span class="Add_text">ADD</span>
-        <span class="Step_description">120g icing sugar</span>
+        <span id="Step_description">150g plain flour</span>
 
         <div class="right_grey">
 
@@ -40,6 +41,10 @@
                 <div class="ring quad4"></div>
                 <div class="cutout"></div>
             </div>
+        </div>
+
+        <div id="popup">
+            <button id="Ready_button">Ready</button>
         </div>
     </div>
 </body>
