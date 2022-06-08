@@ -20,7 +20,7 @@ body {
 }
 
 
-.home_Button {
+#home_Button {
   width: 74px;
   height: 41px;
   background: rgba(245,245,245,1);
@@ -100,7 +100,8 @@ button{
   text-align: center;
 }
 
-.PreviousR_button {
+#PreviousR_button {
+  visibility: hidden;
   width: 128px;
   height: 46px;
   background: rgba(245,245,245,1);
@@ -191,28 +192,28 @@ button{
   height: 50%;
 }
 
-.ring.quad2 {
+#q2 {
   top: 0;
   left: 0;
   background-color: rgba(255,255,255,1);
   border-radius: 100% 0 0 0;
 }
 
-.ring.quad1 {
+#q1 {
   top: 0;
   right: 0;
   background-color: #00CC2C;
   border-radius: 0 100% 0 0;
 }
 
-.ring.quad3 {
+#q3 {
   bottom: 0;
   left: 0;
   background-color: rgba(255,255,255,1);
   border-radius: 0 0 0 100%;
 }
 
-.ring.quad4 {
+#q4 {
   bottom: 0;
   right: 0;
   background-color: rgba(255,255,255,1);
@@ -246,6 +247,10 @@ button{
   left: 50px;
   display: inline-block;
   cursor: pointer;
+  filter: drop-shadow(0 0 1rem rgb(118, 118, 118));
+  /* background-color: rgba(245,245,245,0.8);
+  backdrop-filter: blur(20px); */
+
 }
 
 
@@ -254,6 +259,7 @@ button{
 }
 
 #Ready_button {
+
   width: 128px;
   height: 46px;
   background: rgba(255,184,45,1);
@@ -285,4 +291,21 @@ button{
   text-align: center;
 }
 
-
+#Done_button {
+  visibility: hidden;
+  width: 128px;
+  height: 46px;
+  background: rgba(255,184,45,1);
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top-left-radius: 23px;
+  border-top-right-radius: 23px;
+  border-bottom-left-radius: 23px;
+  border-bottom-right-radius: 23px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}

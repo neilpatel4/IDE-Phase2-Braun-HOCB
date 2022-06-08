@@ -14,15 +14,26 @@ const recipes = {"VSC": {"Steps": [1, 2, 3, 4], "step1": "150g plain flour", "st
 
 */
 
-const recipes = {"VSC": {"Steps": [1, 2, 3, 4], "instructions": ["150g plain flour", "50g white sugar", "120g icing sugar", "10g baking soda"]},
-                 "CC": {"Steps": 4, "step1": "150g"}};
+const recipes = {
+  "VSC": { "Steps": [1, 2, 3, 4], "instructions": ["150g plain flour", "50g white sugar", "120g icing sugar", "10g baking soda"] },
+  "CC": { "Steps": 4, "step1": "150g" }
+};
 
 //JS Buttons
 const next_button = document.getElementById("NextR_button");
+const back_button = document.getElementById("PreviousR_button");
 const ready_button = document.getElementById("Ready_button");
+const done_button = document.getElementById("Done_button");
+const home_button = document.getElementById("home_Button");
 const popup = document.getElementById("popup");
 const steps_count = document.getElementById("Steps1");
 const description = document.getElementById("Step_description");
+const quad1 = document.getElementById("q1");
+const quad2 = document.getElementById("q2");
+const quad3 = document.getElementById("q3");
+const quad4 = document.getElementById("q4");
+
+const quads = [quad1, quad4, quad3, quad2];
 
 // Recipe data
 var total_steps = recipes.VSC.Steps.length;
@@ -32,11 +43,6 @@ var current_step = recipes.VSC.Steps;
 
 // Decription data
 var instruction = recipes.VSC.instructions;
-var s = 0;
-
-for (let s in instruction) {
-    console.log(s + ' is ' + instruction[s])
-};
 
 /*
 let i = 0;
@@ -54,27 +60,63 @@ for (let step = 0; step < 4; step++) {
   };
   */
 
-  
+
+home_button.onclick = function () {
+  window.location.replace("index.html");
+  console.log("Home button pressed. Move linear actuator down.");
+};
+
+
 next_button.onclick = function () {
-    //Linear acutuator = move down
-    console.log(total_steps);
-    
-    popup.style.visibility = "visible";
+  //Linear acutuator = move down
+  console.log("Linear Actuator move to down position");
+  popup.style.visibility = "visible";
+  check_back_button(i);
+  if (current_step[i] == total_steps) {
+    done_button.style.visibility = "visible";
+    ready_button.style.visibility = "hidden";
+  };
 
 };
 
+
+done_button.onclick = function () {
+  window.location.replace("index.html");
+  console.log("Finished. Move linear actuator down.");
+};
 
 ready_button.onclick = function () {
-    //console.log("Linear Actuator moved down");
-    popup.style.visibility = "hidden";
-    i += 1;
-    //console.log(current_step[i]);
-    var steps_message = "Step ".concat(current_step[i], " of ", total_steps);
-    steps_count.innerHTML = steps_message;
-    description.innerHTML = instruction[s];
-    s += 1;
+  console.log("Move to next ingredient height");
+  popup.style.visibility = "hidden";
+  i += 1;
+  console.log(current_step[i]);
+  var steps_message = "Step ".concat(current_step[i], " of ", total_steps);
+  steps_count.innerHTML = steps_message;
+  description.innerHTML = instruction[i];
+  quads[i].style.backgroundColor = "#00CC2C";
+  check_back_button(i);
 };
 
 
+back_button.onclick = function () {
+  console.log("Move to previous ingredient height");
+  i = i - 1;
+  console.log(current_step[i]);
+  check_back_button(i);
+  popup.style.visibility = "hidden";
 
+  var steps_message = "Step ".concat(current_step[i], " of ", total_steps);
+  steps_count.innerHTML = steps_message;
+  description.innerHTML = instruction[i];
+  quads[i + 1].style.backgroundColor = "#FFFFFF";
+};
+
+
+function check_back_button(i) {
+  if (current_step[i] >= 2) {
+    back_button.style.visibility = "visible";
+  } else {
+    back_button.style.visibility = "hidden";
+  };
+};
 
