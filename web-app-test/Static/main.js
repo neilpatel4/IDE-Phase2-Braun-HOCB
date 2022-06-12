@@ -1,6 +1,19 @@
 import Recipes from "../Densities.js";
 
+// check for active connection
+var isConnectionActive = false;
 
+// connect to the Web Socket server
+var connection = io( 'http://192.168.0.71:9000' );
+
+// when connection is established 
+connection.on( 'connect', () => {
+  isConnectionActive = true;
+} );
+
+connection.on( 'disconnect', () => {
+  isConnectionActive = false;
+} );
 
 // Recipe step by step array
 //var recipe_step = {"VSC": [1, 2, 3, 4],
