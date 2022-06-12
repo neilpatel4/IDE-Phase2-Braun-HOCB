@@ -1,6 +1,6 @@
 import Recipes from "../Densities.js";
 
-var socket = io();
+
 
 // Recipe step by step array
 //var recipe_step = {"VSC": [1, 2, 3, 4],
