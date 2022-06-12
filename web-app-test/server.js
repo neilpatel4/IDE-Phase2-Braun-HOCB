@@ -19,7 +19,7 @@ app.get( '/', ( request, response ) => {
 } );
 
 // send asset files
-app.use( '/assets/', express.static( path.resolve( __dirname, 'Static' ) ) );
+app.use( '/assets/', express.static( path.resolve( __dirname, 'web-app-test/Static' ) ) );
 app.use( '/assets/', express.static( path.resolve( __dirname, 'node_modules/socket.io-client/dist' ) ) );
 
 // server listens on `9000` port
