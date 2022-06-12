@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.screen {
+  width: 800px;
+  height: 480px;
+  background: rgb(255, 255, 255, 1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.Recipes {
+  width: 152px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 30px;
+  left: 49px;
+  font-family: Helvetica Neue;
+  font-weight: Bold;
+  font-size: 32px;
+  opacity: 1;
+  text-align: left;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.vanilla_option, .chocolate_option, .white_option{
+  cursor: pointer;
+}
+
+.vanilla {
+  width: 170px;
+  height: 271px;
+  background: rgba(245,245,245,1);
+  opacity: 1;
+  position: absolute;
+  top: 99px;
+  left: 110px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  overflow: hidden;
+}
+
+.vanilla:after {
+  content: "";
+  background:rgb(224, 219, 219);
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.vanilla:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+.vanilla_image {
+  width: 170px;
+  height: 121px;
+  background: url("Vanilla.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 99px;
+  left: 110px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  overflow: hidden;
+}
+
+.vanilla_text {
+  width: 135px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 231px;
+  left: 125px;
+  font-family: Helvetica Neue;
+  font-weight: Bold;
+  font-size: 24px;
+  opacity: 1;
+  text-align: left;
+}
+
+.chocolate {
+  width: 170px;
+  height: 271px;
+  background: rgba(245,245,245,1);
+  opacity: 1;
+  position: absolute;
+  top: 99px;
+  left: 315px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  overflow: hidden;
+}
+.chocolate_image {
+  width: 170px;
+  height: 121px;
+  background: url("Chocolate.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 99px;
+  left: 315px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  overflow: hidden;
+}
+
+.chocolate_text {
+  width: 135px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 231px;
+  left: 333px;
+  font-family: Helvetica Neue;
+  font-weight: Bold;
+  font-size: 24px;
+  opacity: 1;
+  text-align: left;
+}
+.white_cookie {
+  width: 170px;
+  height: 271px;
+  background: rgba(245,245,245,1);
+  opacity: 1;
+  position: absolute;
+  top: 99px;
+  left: 520px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  overflow: hidden;
+}
+.white_cookie_image {
+  width: 170px;
+  height: 121px;
+  background: url("White.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 99px;
+  left: 520px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  overflow: hidden;
+}
+
+.white_cookie_text {
+  width: 135px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 231px;
+  left: 538px;
+  font-family: Helvetica Neue;
+  font-weight: Bold;
+  font-size: 24px;
+  opacity: 1;
+  text-align: left;
+}
+
+#popup {
+  visibility: hidden;
+  width: 700px;
+  height: 420px;
+  background: rgba(245,245,245,1);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+#ready_button{
+  cursor: pointer;
+}
+
+#Ready_button {
+  width: 128px;
+  height: 46px;
+  background: rgba(255,184,45,1);
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top-left-radius: 23px;
+  border-top-right-radius: 23px;
+  border-bottom-left-radius: 23px;
+  border-bottom-right-radius: 23px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+
+#Ready_button_text {
+  width: 132px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Helvetica Neue;
+  font-weight: Medium;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+
+
