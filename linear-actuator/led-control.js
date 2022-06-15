@@ -20,7 +20,7 @@ exports.toggle = ( r, g, b ) => {
 };
 
 exports.extension_control = async function (t) {
-  LAR.writeSync(1);
+  LAE.writeSync(1);
   await sleep(t);
-  LAR.writeSync(0);
+  LAE.writeSync(0);
 };
