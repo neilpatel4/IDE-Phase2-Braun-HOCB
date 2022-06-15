@@ -18,6 +18,14 @@ app.get( '/', ( request, response ) => {
   } );
 } );
 
+app.get( '/', ( request, response ) => {
+  response.sendFile( path.resolve( __dirname, 'Static/Step1.html' ), {
+    headers: {
+      'Content-Type': 'text/html',
+    }
+  } );
+} );
+
 // send asset files
 app.use( '/assets/', express.static( path.resolve( __dirname, 'web-app-test/Static' ) ) );
 app.use( '/assets/', express.static( path.resolve( __dirname, 'node_modules/socket.io-client/dist' ) ) );
