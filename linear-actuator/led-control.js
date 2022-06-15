@@ -19,7 +19,7 @@ exports.toggle = ( r, g, b ) => {
   // pin_blue.writeSync( b ? 1 :0 );
 };
 
-exports.extension_control = async (t) => {
+exports.extension_control = async function (t) {
   LAE.writeSync(1);
   await sleep(t);
   LAE.writeSync(0);
