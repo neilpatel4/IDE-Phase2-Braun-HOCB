@@ -4,7 +4,7 @@ const socketIO = require( 'socket.io' );
 
 // import LED control API
 const { toggle } = require( './led-control' );
-const { extension } = require( './led-control' );
+const { extension_control } = require( './led-control' );
 
 // create an express app
 const app = express();
@@ -43,7 +43,7 @@ io.on( 'connection', ( client ) => {
   client.on( 'linear-actuator', ( data ) => {
     console.log( 'Received linear actuator extend event.' );
     console.log(data);
-    extension(2000); // activate linear actuator for 2s
+    extension_control(2000); // activate linear actuator for 2s
   } );
 
 } );
