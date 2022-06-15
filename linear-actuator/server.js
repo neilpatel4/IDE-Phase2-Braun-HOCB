@@ -4,7 +4,7 @@ const socketIO = require( 'socket.io' );
 
 // import LED control API
 const { toggle } = require( './led-control' );
-const { actuator } = require( './led-control' );
+const { extension } = require( './led-control' );
 
 // create an express app
 const app = express();
