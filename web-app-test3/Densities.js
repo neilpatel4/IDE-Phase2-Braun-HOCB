@@ -70,18 +70,18 @@ exports.actuator = async function (R, n) {
     let t;
     if (Current_Unit == "g") {
         h = 100 - m / ((p / 1000) * Math.PI * (57 ** 2));
-        t = h / 25;
+        t = (h / 25)*1000;
     } else if (Current_Unit == "cups") {
         m = m * 120;
         h = 100 - m / ((p / 1000) * Math.PI * (57 ** 2));
-        t = h / 25;
+        t = (h / 25)*1000;
     } else if (Current_Unit == "oz") {
         m = m * 28.3495;
         h = 100 - m / ((p / 1000) * Math.PI * (57 ** 2));
-        t = h / 25;
+        t = (h / 25)*1000;
     } else {
         h = 100 - m / ((1 / 1000) * Math.PI * (57 ** 2));
-        t = h / 25;
+        t = (h / 25)*1000;
     }
     console.log(t);
     LAE.writeSync(1);
