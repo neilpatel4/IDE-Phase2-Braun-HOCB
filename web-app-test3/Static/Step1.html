@@ -530,7 +530,6 @@ start_button.onclick = function() {
 };
 
 ready_button.onclick = function () {
-  addEventListener('click', emitEvent);
   console.log("Move to next ingredient height");
   popup.style.visibility = "hidden";
   i += 1;
@@ -544,6 +543,7 @@ ready_button.onclick = function () {
     done_button.style.visibility = "visible";
     next_button.style.visibility = "hidden";
   }
+  addEventListener('click', emitEvent);
 
 
   //var move_time = Recipes.step_time(Recipes.Vanilla_Sponge_Cake, i);
