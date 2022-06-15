@@ -1,6 +1,6 @@
 // const Recipes = Object.create(null);
 
-const { Gpio } = require('onoff').Gpio;
+const { Gpio } = require('onoff');
 const LAE = new Gpio(14, 'out');
 const LAR = new Gpio(4, 'out');
 
