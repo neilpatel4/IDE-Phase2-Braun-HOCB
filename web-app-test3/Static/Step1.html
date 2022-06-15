@@ -545,8 +545,12 @@ next_button.onclick = function () {
 
 
 done_button.onclick = function () {
-  window.location.replace("index.html");
+  // window.location.replace("index.html");
   console.log("Finished. Move linear actuator down.");
+  if (i === 3) {
+    ready_button.addEventListener('click', emitReady4);
+    console.log("emitReady4");
+  };
 };
 
 
