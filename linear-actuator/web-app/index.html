@@ -61,7 +61,11 @@ var emitEvent = function( event ) {
   //  console.log("Blue Button Pressed");
   //  connection.emit('linear-actuator')
   // };
-  if( event.target.id === 'button-blue') { button_blue_state = ! button_blue_state; }
+  if( event.target.id === 'button-blue') { 
+    button_blue_state = ! button_blue_state;
+    console.log("Blue Button Pressed");
+    connection.emit('linear-actuator')
+   }
 
   // emit `led-toggle` socket event
   connection.emit( 'led-toggle', {
