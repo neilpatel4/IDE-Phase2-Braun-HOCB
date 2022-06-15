@@ -427,11 +427,32 @@ connection.on( 'disconnect', () => {
   isConnectionActive = false;
 } );
 
-var emitReady = function( event ) {
+var emitReady1 = function( event ) {
   if( ! isConnectionActive) {
     return alert('Server connection is closed!');
   }
   connection.emit( 'step-1')
+};
+
+var emitReady2 = function( event ) {
+  if( ! isConnectionActive) {
+    return alert('Server connection is closed!');
+  }
+  connection.emit( 'step-2')
+};
+
+var emitReady3 = function( event ) {
+  if( ! isConnectionActive) {
+    return alert('Server connection is closed!');
+  }
+  connection.emit( 'step-3')
+};
+
+var emitReady4 = function( event ) {
+  if( ! isConnectionActive) {
+    return alert('Server connection is closed!');
+  }
+  connection.emit( 'step-4')
 };
 
 var emitNext = function( event ) {
@@ -539,10 +560,21 @@ start_button.onclick = function() {
 
 
 ready_button.onclick = function () {
-  ready_button.addEventListener('click', emitReady);
   console.log("Move to next ingredient height");
   popup.style.visibility = "hidden";
   i += 1;
+  if (i === 1) {
+    ready_button.addEventListener('click', emitReady1);
+  };
+  if (i === 2) {
+    ready_button.addEventListener('click', emitReady2);
+  };
+  if (i === 3) {
+    ready_button.addEventListener('click', emitReady3);
+  };
+  if (i === 4) {
+    ready_button.addEventListener('click', emitReady4);
+  };
   console.log(current_step[i]);
   var steps_message = "Step ".concat(current_step[i], " of ", total_steps);
   steps_count.innerHTML = steps_message;

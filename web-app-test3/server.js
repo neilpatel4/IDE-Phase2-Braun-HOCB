@@ -33,10 +33,28 @@ const io = socketIO( server );
 io.on( 'connection', ( client ) => {
   console.log( 'SOCKET: ', 'A client connected', client.id );
 
-  // listen to `led-toggle` event
+  // listen to `step-1` event
   client.on( 'step-1', ( data ) => {
     console.log( 'Received linear actuator extend event.' );
     actuator(Vanilla_Sponge_Cake, 1); // step one
+  } );
+
+    // listen to `step-1` event
+  client.on( 'step-2', ( data ) => {
+    console.log( 'Received linear actuator extend event.' );
+    actuator(Vanilla_Sponge_Cake, 2); // step one
+  } );
+
+    // listen to `step-1` event
+  client.on( 'step-3', ( data ) => {
+    console.log( 'Received linear actuator extend event.' );
+    actuator(Vanilla_Sponge_Cake, 3); // step one
+  } );
+
+    // listen to `step-1` event
+  client.on( 'step-4', ( data ) => {
+    console.log( 'Received linear actuator extend event.' );
+    actuator(Vanilla_Sponge_Cake, 4); // step one
   } );
 
   client.on( 'next', ( data ) => {
