@@ -42,7 +42,7 @@ io.on( 'connection', ( client ) => {
   // listen to `linear actuator` event
   client.on( 'linear-actuator', ( data ) => {
     console.log( 'Received linear actuator extend event.' );
-    console.log(data);
+    // console.log(data);
     extension_control(2000); // activate linear actuator for 2s
   } );
 
