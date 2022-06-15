@@ -427,12 +427,20 @@ connection.on( 'disconnect', () => {
   isConnectionActive = false;
 } );
 
-var emitEvent = function( event ) {
+var emitReady = function( event ) {
   if( ! isConnectionActive) {
     return alert('Server connection is closed!');
   }
   connection.emit( 'step-1')
 };
+
+var emitNext = function( event ) {
+  if( ! isConnectionActive) {
+    return alert('Server connection is closed!');
+  }
+  connection.emit( 'next')
+};
+
 
 
 
@@ -511,7 +519,7 @@ next_button.onclick = function () {
   console.log("Linear Actuator move to down position");
   popup.style.visibility = "visible";
   check_back_button(i);
-
+  next_button.addEventListener('click', emitNext);
 
 };
 
@@ -529,7 +537,7 @@ start_button.onclick = function() {
   
 };
 
-ready_button.addEventListener('click', emitEvent);
+ready_button.addEventListener('click', emitReady);
 
 // ready_button.onclick = function () {
 //   console.log("Move to next ingredient height");

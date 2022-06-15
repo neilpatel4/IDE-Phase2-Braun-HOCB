@@ -90,6 +90,11 @@ exports.actuator = async function (R, n) {
     return t;
 };
 
+exports.actuator_down = async function(){
+    LAR.writeSync(1);
+    await sleep(4000);
+    LAR.writeSync(0);
+}
 // Recipes.step_time(Recipes.Vanilla_Sponge_Cake, 1);
 
 /* Recipe_Step_Time(Vanilla_Sponge_Cake, 2); */

@@ -3,7 +3,7 @@ const express = require( 'express' );
 const socketIO = require( 'socket.io' );
 
 // import LED control API
-const { actuator } = require('./Densities' );
+const { actuator, actuator_down } = require('./Densities' );
 
 // create an express app
 const app = express();
@@ -36,7 +36,12 @@ io.on( 'connection', ( client ) => {
   // listen to `led-toggle` event
   client.on( 'step-1', ( data ) => {
     console.log( 'Received linear actuator extend event.' );
-    actuator(Vanilla_Sponge_Cake, 1); // toggle LEDs
+    actuator(Vanilla_Sponge_Cake, 1); // step one
+  } );
+
+  client.on( 'next', ( data ) => {
+    console.log( 'Received linear actuator extend event.' );
+    actuator_down(); // bring actuator down
   } );
 
 } );
