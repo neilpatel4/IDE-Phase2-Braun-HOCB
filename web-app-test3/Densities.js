@@ -48,7 +48,7 @@ var Red_Velvet_Cake = {
 };
 
 // Vanilla Sponge Cake Recipe ingredients
-Recipes.Vanilla_Sponge_Cake = {
+Vanilla_Sponge_Cake = {
     1: ["Golden Caster Sugar", 250, "g"],
     2: ["Self-Raising Flour", 255, "g"],
     3: ["Plain Flour", 85, "g"],
