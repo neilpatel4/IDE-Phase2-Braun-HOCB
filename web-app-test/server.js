@@ -11,7 +11,7 @@ const app = express();
 // send `index.html` from the current directory
 // when `http://<ip>:9000/` route is accessed using `GET` method
 app.get( '/', ( request, response ) => {
-  response.sendFile( path.resolve( __dirname, 'Static/Step1.html' ), {
+  response.sendFile( path.resolve( __dirname, 'Static/index.html' ), {
     headers: {
       'Content-Type': 'text/html',
     }
