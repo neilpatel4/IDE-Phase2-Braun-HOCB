@@ -57,11 +57,11 @@ var emitEvent = function( event ) {
   // change button state
   if( event.target.id === 'button-red') { button_red_state = ! button_red_state; }
   if( event.target.id === 'button-green') { button_green_state = ! button_green_state; }
-  if( event.target.id === 'button-blue') {
-    console.log("Blue Button Pressed");
-    connection.emit('linear-actuator')
-  };
-  // if( event.target.id === 'button-blue') { button_blue_state = ! button_blue_state; }
+  // if( event.target.id === 'button-blue') {
+  //  console.log("Blue Button Pressed");
+  //  connection.emit('linear-actuator')
+  // };
+  if( event.target.id === 'button-blue') { button_blue_state = ! button_blue_state; }
 
   // emit `led-toggle` socket event
   connection.emit( 'led-toggle', {
