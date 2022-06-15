@@ -2,8 +2,8 @@
 const { Gpio } = require( 'onoff' );
 
 // configure LED pins
-const LAE = new Gpio( 26, 'out' );
-const LAR = new Gpio( 19, 'out' );
+const LAE = new Gpio( 4, 'out' );
+const LAR = new Gpio( 14, 'out' );
 const pin_blue = new Gpio( 13, 'out' );
 
 // toggle LED states
