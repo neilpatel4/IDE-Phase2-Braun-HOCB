@@ -17,7 +17,8 @@ var Densities = {
     "Golden Caster Sugar": 0.77,
     "White Sugar": 1.59,
     "Brown Sugar": 0.721,
-    "Cream Cheese": 0.98
+    "Cream Cheese": 0.98,
+    "Plain Flour": 0.510
 };
 
 //Carrot Cake Recipe ingredients§

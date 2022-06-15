@@ -35,30 +35,30 @@ io.on( 'connection', ( client ) => {
 
   // listen to `step-1` event
   client.on( 'step-1', ( data ) => {
-    console.log( 'Received linear actuator extend event.' );
+    console.log( 'Received linear actuator extend event 1.' );
     actuator(Vanilla_Sponge_Cake, 1); // step one
   } );
 
     // listen to `step-1` event
   client.on( 'step-2', ( data ) => {
-    console.log( 'Received linear actuator extend event.' );
+    console.log( 'Received linear actuator extend event 2.' );
     actuator(Vanilla_Sponge_Cake, 2); // step one
   } );
 
     // listen to `step-1` event
   client.on( 'step-3', ( data ) => {
-    console.log( 'Received linear actuator extend event.' );
+    console.log( 'Received linear actuator extend event 3.' );
     actuator(Vanilla_Sponge_Cake, 3); // step one
   } );
 
     // listen to `step-1` event
   client.on( 'step-4', ( data ) => {
-    console.log( 'Received linear actuator extend event.' );
+    console.log( 'Received linear actuator extend event 4.' );
     actuator(Vanilla_Sponge_Cake, 4); // step one
   } );
 
   client.on( 'next', ( data ) => {
-    console.log( 'Received linear actuator extend event.' );
+    console.log( 'Received linear actuator retract event.' );
     actuator_down(); // bring actuator down
   } );
 
