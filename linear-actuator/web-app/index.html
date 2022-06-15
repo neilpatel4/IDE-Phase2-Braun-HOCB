@@ -61,11 +61,11 @@ var emitEvent = function( event ) {
   //  console.log("Blue Button Pressed");
   //  connection.emit('linear-actuator')
   // };
-  if( event.target.id === 'button-blue') { 
-    button_blue_state = ! button_blue_state;
-    console.log("Blue Button Pressed");
-    connection.emit('linear-actuator')
-   }
+  // if( event.target.id === 'button-blue') { 
+  //  button_blue_state = ! button_blue_state;
+  //  console.log("Blue Button Pressed");
+  //  connection.emit('linear-actuator')
+  // }
 
   // emit `led-toggle` socket event
   connection.emit( 'led-toggle', {
@@ -75,11 +75,23 @@ var emitEvent = function( event ) {
   } );
 };
 
+var emitEvent2 = function( event ) {
+  if( ! isConnectionActive ) {
+    return alert( 'Server connection is closed!' );
+  }
+
+  if( event.target.id === 'button-blue') { 
+    button_blue_state = ! button_blue_state;
+    console.log("Blue Button Pressed");
+    connection.emit('linear-actuator')
+   }
+
+};
 
 
 // add event listeners on button
 button_red.addEventListener( 'click', emitEvent );
-button_blue.addEventListener( 'click', emitEvent );
+button_blue.addEventListener( 'click', emitEvent2 );
 button_green.addEventListener( 'click', emitEvent );
 </script>
 
