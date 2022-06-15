@@ -1,5 +1,5 @@
 var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
-var Linear_Actuator = new Gpio(4, 'out'); //use GPIO pin 4, and specify that it is output
+var Linear_Actuator = new Gpio(26, 'out'); //use GPIO pin 4, and specify that it is output
 // If nothing happens, change 4 to 7.
 
 
