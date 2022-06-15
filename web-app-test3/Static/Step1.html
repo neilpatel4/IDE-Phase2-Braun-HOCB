@@ -551,10 +551,10 @@ done_button.onclick = function () {
 
 
 start_button.onclick = function() {
+  start_button.addEventListener('click', emitReady1);
   popup.style.visibility = "hidden";
   start_button.style.visibility = "hidden";
   popup_desc.style.visibility = "hidden";
-  start_button.addEventListener('click', emitReady1);
 };
 
 
