@@ -541,7 +541,6 @@ next_button.onclick = function () {
   popup.style.visibility = "visible";
   check_back_button(i);
   next_button.addEventListener('click', emitNext);
-
 };
 
 
@@ -555,7 +554,9 @@ start_button.onclick = function() {
   popup.style.visibility = "hidden";
   start_button.style.visibility = "hidden";
   popup_desc.style.visibility = "hidden";
-  
+  if (i === 1) {
+    ready_button.addEventListener('click', emitReady1);
+  };
 };
 
 
@@ -563,18 +564,16 @@ ready_button.onclick = function () {
   console.log("Move to next ingredient height");
   popup.style.visibility = "hidden";
   i += 1;
-  if (i === 0) {
-    ready_button.addEventListener('click', emitReady1);
-  };
-  if (i === 1) {
+  if (i === 2) {
     ready_button.addEventListener('click', emitReady2);
   };
-  if (i === 2) {
+  if (i === 3) {
     ready_button.addEventListener('click', emitReady3);
   };
-  if (i === 3) {
+  if (i === 4) {
     ready_button.addEventListener('click', emitReady4);
   };
+
   console.log(current_step[i]);
   var steps_message = "Step ".concat(current_step[i], " of ", total_steps);
   steps_count.innerHTML = steps_message;
