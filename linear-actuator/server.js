@@ -36,7 +36,7 @@ io.on( 'connection', ( client ) => {
   // listen to `led-toggle` event
   client.on( 'led-toggle', ( data ) => {
     console.log( 'Received led-toggle event.' );
-    toggle( data.r, data.g, data.b ); // toggle LEDs
+    toggle( data.r, data.g); // toggle LEDs
   } );
 
   // listen to `linear actuator` event

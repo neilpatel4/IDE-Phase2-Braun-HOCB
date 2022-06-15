@@ -13,7 +13,7 @@ async function sleep(ms) {
 }
 
 // toggle LED states
-exports.toggle = ( r, g, b ) => {
+exports.toggle = ( r, g) => {
   LAE.writeSync( r ? 1 : 0 );
   LAR.writeSync( g ? 1 : 0 );
   // pin_blue.writeSync( b ? 1 :0 );
