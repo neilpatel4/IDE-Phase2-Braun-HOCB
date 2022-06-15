@@ -2,7 +2,7 @@
 const { Gpio } = require( 'onoff' );
 
 // configure LED pins
-const LAR = new Gpio( 4, 'out' );
+const LAR = new Gpio( 4, 'out' ); // Red 
 const LAE = new Gpio( 14, 'out' );
 const pin_blue = new Gpio( 13, 'out' );
 
@@ -16,7 +16,7 @@ async function sleep(ms) {
 exports.toggle = ( r, g, b ) => {
   LAE.writeSync( r ? 1 : 0 );
   LAR.writeSync( g ? 1 : 0 );
-  pin_blue.writeSync( b ? 1 :0 );
+  // pin_blue.writeSync( b ? 1 :0 );
 };
 
 exports.extension_control = async (t) => {
