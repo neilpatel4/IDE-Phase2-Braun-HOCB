@@ -563,16 +563,16 @@ ready_button.onclick = function () {
   console.log("Move to next ingredient height");
   popup.style.visibility = "hidden";
   i += 1;
-  if (i === 1) {
+  if (i === 0) {
     ready_button.addEventListener('click', emitReady1);
   };
-  if (i === 2) {
+  if (i === 1) {
     ready_button.addEventListener('click', emitReady2);
   };
-  if (i === 3) {
+  if (i === 2) {
     ready_button.addEventListener('click', emitReady3);
   };
-  if (i === 4) {
+  if (i === 3) {
     ready_button.addEventListener('click', emitReady4);
   };
   console.log(current_step[i]);
