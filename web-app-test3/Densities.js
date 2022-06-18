@@ -18,7 +18,8 @@ var Densities = {
     "White Sugar": 1.59,
     "Brown Sugar": 0.721,
     "Cream Cheese": 0.98,
-    "Plain Flour": 0.510
+    "Plain Flour": 0.510,
+    "Baking Soda": 0.450
 };
 
 //Carrot Cake Recipe ingredients§
@@ -53,7 +54,7 @@ Vanilla_Sponge_Cake = {
     1: ["Golden Caster Sugar", 250, "g"],
     2: ["Self-Raising Flour", 255, "g"],
     3: ["Plain Flour", 85, "g"],
-    4: ["Full-Fat Greek Yogurt", 100, "g"]
+    4: ["Baking Soda", 10, "g"]
 };
 
 exports.actuator = async function (R, n) {
