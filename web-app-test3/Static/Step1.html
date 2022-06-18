@@ -558,7 +558,6 @@ done_button.onclick = function () {
 
 
 start_button.onclick = function() {
-  start_button.addEventListener('click', emitReady1);
   popup.style.visibility = "hidden";
   start_button.style.visibility = "hidden";
   popup_desc.style.visibility = "hidden";
@@ -569,7 +568,37 @@ start_button.onclick = function() {
 };
 
 ready_button.onclick = function () {
-  console.log("Move to next ingredient height");
+  // console.log("Move to next ingredient height");
+  // popup.style.visibility = "hidden";
+  // if (i === 1) {
+  //   ready_button.addEventListener('click', emitReady2);
+  //   console.log("emitReady2");
+  // };
+  // if (i === 2) {
+  //   ready_button.addEventListener('click', emitReady3);
+  //   console.log("emitReady3");
+  // };
+  // if (i === 3) {
+  //   ready_button.addEventListener('click', emitReady4);
+  //   console.log("emitReady4");
+  // };
+  // console.log(current_step[i]);
+  // i += 1;
+  var steps_message = "Step ".concat(current_step[i], " of ", total_steps);
+  steps_count.innerHTML = steps_message;
+  description.innerHTML = instruction[i];
+  quads[i].style.backgroundColor = "#00CC2C";
+  check_back_button(i);
+  if (current_step[i] == total_steps) {
+    done_button.style.visibility = "visible";
+    next_button.style.visibility = "hidden";
+  }
+//   addEventListener('click', emitEvent);
+
+
+//   //var move_time = Recipes.step_time(Recipes.Vanilla_Sponge_Cake, i);
+//   //console.log(move_time);
+console.log("Move to next ingredient height");
   popup.style.visibility = "hidden";
   if (i === 1) {
     ready_button.addEventListener('click', emitReady2);
@@ -585,20 +614,6 @@ ready_button.onclick = function () {
   };
   console.log(current_step[i]);
   i += 1;
-  var steps_message = "Step ".concat(current_step[i], " of ", total_steps);
-  steps_count.innerHTML = steps_message;
-  description.innerHTML = instruction[i];
-  quads[i].style.backgroundColor = "#00CC2C";
-  check_back_button(i);
-  if (current_step[i] == total_steps) {
-    done_button.style.visibility = "visible";
-    next_button.style.visibility = "hidden";
-  }
-//   addEventListener('click', emitEvent);
-
-
-//   //var move_time = Recipes.step_time(Recipes.Vanilla_Sponge_Cake, i);
-//   //console.log(move_time);
 };
 
 
