@@ -547,7 +547,7 @@ next_button.onclick = function () {
 done_button.onclick = function () {
   // window.location.replace("index.html");
   console.log("Finished. Move linear actuator down.");
-  done_button.addEventListener('click', emitNext);
+  emitNext();
   console.log("Recipe complete.");
   i = 0;
   // if (i === 3) {
