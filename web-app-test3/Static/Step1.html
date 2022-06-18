@@ -561,7 +561,7 @@ start_button.onclick = function() {
   popup.style.visibility = "hidden";
   start_button.style.visibility = "hidden";
   popup_desc.style.visibility = "hidden";
-  start_button.addEventListener('click', emitReady1);
+  emitReady1();
   console.log("emitReady1");
   i += 1;
   console.log(i)
@@ -601,15 +601,15 @@ ready_button.onclick = function () {
 console.log("Move to next ingredient height");
   popup.style.visibility = "hidden";
   if (i === 1) {
-    ready_button.addEventListener('click', emitReady2);
+    emitReady2();
     console.log("emitReady2");
   };
   if (i === 2) {
-    ready_button.addEventListener('click', emitReady3);
+    emitReady3();
     console.log("emitReady3");
   };
   if (i === 3) {
-    ready_button.addEventListener('click', emitReady4);
+    emitReady4();
     console.log("emitReady4");
   };
   console.log(current_step[i]);
