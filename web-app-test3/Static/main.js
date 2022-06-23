@@ -9,10 +9,13 @@ var isConnectionActive = false;
 // var connection = io( 'http://192.168.1.42:9000' );
 
 // Philbeach
-var connection = io( 'http://192.168.0.71:9000' );
+// var connection = io( 'http://192.168.0.71:9000' );
 
 // Dyson
 // var connection = io( 'http://192.168.1.42:9000' );
+
+// Saian's iPhone
+var connection = io( 'http://172.20.10.7:9000' );
 
 // when connection is established 
 connection.on( 'connect', () => {
