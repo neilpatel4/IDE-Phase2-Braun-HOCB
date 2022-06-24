@@ -543,7 +543,7 @@ next_button.onclick = function () {
   //Linear acutuator = move down
   console.log("Linear Actuator move to down position");
   popup.style.visibility = "visible";
-  check_back_button(i);
+  // check_back_button(i);
   emitNext();
 };
 
@@ -594,7 +594,7 @@ ready_button.onclick = function () {
   steps_count.innerHTML = steps_message;
   description.innerHTML = instruction[i];
   quads[i].style.backgroundColor = "#00CC2C";
-  check_back_button(i);
+  // check_back_button(i);
   if (current_step[i] == total_steps) {
     done_button.style.visibility = "visible";
     next_button.style.visibility = "hidden";
@@ -639,13 +639,13 @@ console.log("Move to next ingredient height");
 // };
 
 
-function check_back_button(i) {
-  if (current_step[i] >= 2) {
-    back_button.style.visibility = "visible";
-  } else {
-    back_button.style.visibility = "hidden";
-  }
-};
+// function check_back_button(i) {
+//   if (current_step[i] >= 2) {
+//     back_button.style.visibility = "visible";
+//   } else {
+//     back_button.style.visibility = "hidden";
+//   }
+// };
 
 
 </script>
