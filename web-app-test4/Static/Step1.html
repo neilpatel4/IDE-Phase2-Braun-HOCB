@@ -29,10 +29,10 @@
             <button id="Done_button">Done</button>
 
         </div>
-
+<!-- 
         <div class=change_button>
             <button id="PreviousR_button">Back</button>
-        </div>
+        </div> -->
 
         <span class="Add_text">ADD</span>
         <span id="Step_description">150g plain flour</span>
@@ -52,7 +52,6 @@
         <div id="popup">
             <button id="Ready_button">Ready</button>
             <button id="start_button">Start</button>
-            <img id = "shayan" src=="shayan.jpeg">
             <p id = "popup_desc">To begin, place the container inside the product.</p>
             
         </div>
@@ -141,7 +140,7 @@ button{
   opacity: 1;
   position: absolute;
   top: 413px;
-  left: 197px;
+  left: 136px;
   border-top-left-radius: 23px;
   border-top-right-radius: 23px;
   border-bottom-left-radius: 23px;
@@ -164,7 +163,7 @@ button{
   text-align: center;
 }
 
-#PreviousR_button {
+/* #PreviousR_button {
   visibility: hidden;
   width: 128px;
   height: 46px;
@@ -193,7 +192,7 @@ button{
   font-size: 24px;
   opacity: 1;
   text-align: center;
-}
+} */
 
 .Add_text {
   width: 368px;
@@ -408,26 +407,6 @@ button{
 }
 
 
-
-#shayan {
-  visibility: hidden;
-  width: 128px;
-  height: 46px;
-  opacity: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-top-left-radius: 23px;
-  border-top-right-radius: 23px;
-  border-bottom-left-radius: 23px;
-  border-bottom-right-radius: 23px;
-  overflow: hidden;
-  border: none;
-  cursor: pointer;
-}
-
-
 </style>
 
 
@@ -576,8 +555,7 @@ done_button.onclick = function () {
   console.log("Recipe complete.");
   i = 0;
 
-  popup.style.visibility = "visible";
-  shayan.style.visibilty = "visible";
+
   // if (i === 3) {
   //   ready_button.addEventListener('click', emitReady4);
   //   console.log("emitReady4");
@@ -645,20 +623,20 @@ console.log("Move to next ingredient height");
 };
 
 
-back_button.onclick = function () {
-  done_button.style.visibility = "hidden";
-  next_button.style.visibility = "visible";
-  console.log("Move to previous ingredient height");
-  i = i - 1;
-  console.log(current_step[i]);
-  check_back_button(i);
-  popup.style.visibility = "hidden";
+// back_button.onclick = function () {
+//   done_button.style.visibility = "hidden";
+//   next_button.style.visibility = "visible";
+//   console.log("Move to previous ingredient height");
+//   i = i - 1;
+//   console.log(current_step[i]);
+//   check_back_button(i);
+//   popup.style.visibility = "hidden";
 
-  var steps_message = "Step ".concat(current_step[i], " of ", total_steps);
-  steps_count.innerHTML = steps_message;
-  description.innerHTML = instruction[i];
-  quads[i + 1].style.backgroundColor = "#FFFFFF";
-};
+//   var steps_message = "Step ".concat(current_step[i], " of ", total_steps);
+//   steps_count.innerHTML = steps_message;
+//   description.innerHTML = instruction[i];
+//   quads[i + 1].style.backgroundColor = "#FFFFFF";
+// };
 
 
 function check_back_button(i) {
